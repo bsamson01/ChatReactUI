@@ -98,10 +98,10 @@ class Chat extends React.Component {
             <div >
                 <ParticlesComponent/>
                 <section className="vh-100 content d-flex justify-content-center align-items-center" >
-                    <div className="row d-flex main-chat-box text-white bg-dark shadow-lg">
-                        <div className="col-sm-12 col-md-5 col-lg-4 h-100 bg-bark d-none  d-md-block"></div>
+                    <div className="row d-flex main-chat-box text-white shadow-lg">
+                        <div className="col-sm-12 col-md-5 col-lg-4 h-100 bg-dark d-none d-md-block"></div>
                         <div className="col-sm-12 col-md-7 col-lg-8 px-0 h-100 gradient-custom-2 chat-container position-relative">
-                            <div className="chat-container overflow-auto pt-2 px-3">
+                            <div className="chat-container overflow-auto pt-2 px-3 h-100">
                                 {this.renderChat()}
                             </div>
                             <form className="attach-to-bottom w-100 position-absolute bottom-0" onSubmit={(e) => this.onMessageSubmit(e, this.state)}>

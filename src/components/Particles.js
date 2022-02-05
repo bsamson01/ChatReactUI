@@ -13,7 +13,7 @@ class ParticlesComponent extends React.Component {
                       "composite": "destination-out",
                       "cover": {
                         "color": {
-                          "value": "#fff"
+                          "value": "#ccc"
                         },
                         "opacity": 0
                       },
@@ -88,7 +88,7 @@ class ParticlesComponent extends React.Component {
                           "area": {
                             "gradient": {
                               "start": {
-                                "value": "#ffffff"
+                                "value": "#cccccc"
                               },
                               "stop": {
                                 "value": "#000000"
@@ -180,7 +180,7 @@ class ParticlesComponent extends React.Component {
                         }
                       },
                       "color": {
-                        "value": "#ffffff",
+                        "value": "#cccccc",
                         "animation": {
                           "h": {
                             "count": 0,
@@ -253,7 +253,7 @@ class ParticlesComponent extends React.Component {
                       "links": {
                         "blink": false,
                         "color": {
-                          "value": "#ffffff"
+                          "value": "#cccccc"
                         },
                         "consent": false,
                         "distance": 150,
@@ -501,7 +501,7 @@ class ParticlesComponent extends React.Component {
                       "stroke": {
                         "width": 1,
                         "color": {
-                          "value": "#ffffff",
+                          "value": "#cccccc",
                           "animation": {
                             "h": {
                               "count": 0,
