@@ -24,7 +24,7 @@ class Home extends React.Component {
                     <div className="container h-100">
                         <div className="row h-100 align-items-center">
                             <div className="col-12 text-center">
-                                <h1 className="fw-bold">Welcome to the open source chat</h1>
+                                <h1 className="fw-bold">Welcome to my open source chat project</h1>
                                 <p className="lead">A great way to communicate with a secure tool.</p>
                                 <button className="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#authModal">Get Started</button>
                             </div>
