@@ -3,18 +3,9 @@ import React from 'react'
 
 class ParticlesComponent extends React.Component {
     render() {
-        const particlesInit = (main) => {
-            console.log(main);
-          };
-        
-          const particlesLoaded = (container) => {
-            console.log(container);
-          };
           return (
             <Particles
               id="homepage-particles"
-              init={particlesInit}
-              loaded={particlesLoaded}
               options={
                 {
                     "autoPlay": true,
@@ -34,7 +25,7 @@ class ParticlesComponent extends React.Component {
                     },
                     "detectRetina": true,
                     "duration": 0,
-                    "fpsLimit": 120,
+                    "fpsLimit": 20,
                     "interactivity": {
                       "detectsOn": "window",
                       "events": {

@@ -20,7 +20,7 @@ class Home extends React.Component {
         return (
             <div>
                 <ParticlesComponent/>
-                <div className="home">
+                <div className="home content">
                     <div className="container h-100">
                         <div className="row h-100 align-items-center">
                             <div className="col-12 text-center">

@@ -1,6 +1,6 @@
 class ApiService {
     constructor() {
-        this.apiUrl = 'https://chatserver-bsam.herokuapp.com';
+        this.apiUrl = 'https://chatserver-bsam.herokuapp.com/api';
         this.headers = new Headers({
             'Content-Type': 'application/json',
             'Accept': 'application/json'

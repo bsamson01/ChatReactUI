@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactSession } from 'react-client-session'
 import ApiService from '../services/ApiService';
 
 class Lang {
@@ -74,18 +75,18 @@ class AuthFormComponent extends React.Component {
     async handleFormSubmit(e) {
         e.preventDefault();
         if (this.validateForm()) {
-            let response = this.state.isLogin ?
-                await this.state.apiService.post('/user/login', {
-                    email: this.state.email,
-                    password: this.state.password
-                }) :
-                await this.state.apiService.post('/user/register', {
+            const url = this.state.isLogin ? "/user/login" : "/user/register";
+            
+            if (this.state.isLogin) {
+                this.state.apiService.post(url, {
                     name: this.state.name,
                     email: this.state.email,
                     password: this.state.password
+                }).then(res => {
+                    ReactSession.set("user", res);
+                    window.location.href = "/chat";
                 });
-            
-            console.log(response);
+            } 
         }
     }
 

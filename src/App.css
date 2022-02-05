@@ -5,6 +5,11 @@
   min-height: 500px;
 }
 
+.content {
+  position: relative;
+  z-index: 2;
+}
+
 footer {
   z-index: 3;
   position: relative;
