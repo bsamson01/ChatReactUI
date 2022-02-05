@@ -1,2 +1,2 @@
-web: node index.js
+web: npm run build && serve -s build
 heroku ps:scale web=1
