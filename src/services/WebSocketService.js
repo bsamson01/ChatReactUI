@@ -20,7 +20,6 @@ class WebSocketService {
 
     open() {
         this.socket = new WebSocket('wss://chatsocket-bsam.herokuapp.com');
-        return Promise.resolve(this.socket)
     }
 
     isOpen() {
@@ -28,15 +27,7 @@ class WebSocketService {
     }
     
     send(message) {
-        if(!this.isOpen()) {
-            this.open().then(() => {
-                this.socket.send(JSON.stringify(message));
-            }).catch(() => {
-                console.log('Failed to open WebSocket connection');
-            });
-        } else {
-            this.socket.send(JSON.stringify(message));
-        }
+        this.socket.send(JSON.stringify(message));
     }
 }
 

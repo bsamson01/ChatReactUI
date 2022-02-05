@@ -35,3 +35,13 @@ img {
     border-bottom-right-radius: .3rem;
   }
 }
+
+.main-chat-box {
+  height: 80vh;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.chat-container {
+  position: relative;
+}

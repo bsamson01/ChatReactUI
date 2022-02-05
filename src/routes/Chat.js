@@ -63,7 +63,6 @@ class Chat extends React.Component {
 	}
 
 	getChatsList() {
-
         this.state.apiService.post('/chat', { user_id : this.state.user._id }).then(res => {
             const data = res.json();
             this.setState({ chatsList: data });
@@ -98,29 +97,22 @@ class Chat extends React.Component {
         return (
             <div >
                 <ParticlesComponent/>
-                <section className="vh-100 pb-5 mb-5 content" >
-                    <div className="row d-flex justify-content-center align-items-center h-100">
-                        <div className="col-lg-12 col-xl-11">
-                            <div className="card text-white bg-dark" >
-                                <div className="d-flex justify-content-center">
-                                    <div className="col-md-8 col-sm-12">
-                                        <div className="chat-container border overflow-auto pt-2 px-3">
-                                            {this.renderChat()}
-                                        </div>
-        
-                                        <form onSubmit={(e) => this.onMessageSubmit(e, this.state)}>
-                                            <div className="input-group">
-                                                <input type="text" name="currentMessage" className="form-control" value={this.state.currentMessage}  onChange={(e) => {this.setState({currentMessage: e.target.value})}} />
-                                                <div className="input-group-append">
-                                                    <button onClick={(e) => this.onMessageSubmit(e, this.state)} className="btn btn-outline-secondary" type="button">Send</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-        
-                                </div>
+                <section className="vh-100 content d-flex justify-content-center align-items-center" >
+                    <div className="row d-flex main-chat-box text-white bg-dark shadow-lg">
+                        <div className="col-sm-12 col-md-5 col-lg-4 h-100 bg-bark d-none  d-md-block"></div>
+                        <div className="col-sm-12 col-md-7 col-lg-8 px-0 h-100 gradient-custom-2 chat-container position-relative">
+                            <div className="chat-container overflow-auto pt-2 px-3">
+                                {this.renderChat()}
                             </div>
-                        </div>
+                            <form className="attach-to-bottom w-100 position-absolute bottom-0" onSubmit={(e) => this.onMessageSubmit(e, this.state)}>
+                                <div className="input-group">
+                                    <input type="text" name="currentMessage" className="form-control" value={this.state.currentMessage}  onChange={(e) => {this.setState({currentMessage: e.target.value})}} />
+                                    <div className="input-group-append">
+                                        <button onClick={(e) => this.onMessageSubmit(e, this.state)} className="btn btn-outline-secondary" type="button">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> 
                     </div>
                 </section>
             </div>
