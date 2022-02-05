@@ -94,6 +94,7 @@ class Chat extends React.Component {
 	}
 
     render() {
+        document.title = "Chat App | Chat";
         return (
             <div >
                 <ParticlesComponent/>

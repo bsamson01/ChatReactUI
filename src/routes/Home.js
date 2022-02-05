@@ -17,6 +17,7 @@ class Home extends React.Component {
     }
 
     render() {
+        document.title = "Chat App";
         return (
             <div>
                 <ParticlesComponent/>
