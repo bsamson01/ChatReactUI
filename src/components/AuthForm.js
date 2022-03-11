@@ -76,17 +76,15 @@ class AuthFormComponent extends React.Component {
         e.preventDefault();
         if (this.validateForm()) {
             const url = this.state.isLogin ? "/user/login" : "/user/register";
-            
-            if (this.state.isLogin) {
-                this.state.apiService.post(url, {
-                    name: this.state.name,
-                    email: this.state.email,
-                    password: this.state.password
-                }).then(res => {
-                    ReactSession.set("user", res);
-                    window.location.href = "/chat";
-                });
-            } 
+
+            this.state.apiService.post(url, {
+                name: this.state.name,
+                email: this.state.email,
+                password: this.state.password
+            }).then(res => {
+                ReactSession.set("user", res);
+                window.location.href = "/chat";
+            });
         }
     }
 
